@@ -6,10 +6,22 @@
         xmlns:local="clr-namespace:RegexLesson02"
         mc:Ignorable="d"
         Title="日志查看器" Height="600" Width="800">
+    <Window.Resources>
+        <RoutedCommand x:Key="Load" />
+        <RoutedCommand x:Key="StartFilter" />
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Load}" Executed="OnLoad_Executed" CanExecute="OnLoad_CanExecute" />
+        <CommandBinding Command="{StaticResource StartFilter}" Executed="OnStartFilter_Executed" CanExecute="OnStartFilter_CanExecute" />
+    </Window.CommandBindings>
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
-            
+            <Button Content="打开文件" Command="{StaticResource Load}" />
+            <Label Content="筛选条件：" />
+            <TextBox Text="{Binding Pattern}" MinWidth="100" />
+            <Button Content="开始筛选" Command="{StaticResource StartFilter}" />
+            <Slider Minimum="9" Maximum="200" Value="{Binding ElementName=lstTexts,Path=FontSize}" Width="200" />
         </ToolBar>
-        <ListBox />
+        <ListBox ItemsSource="{Binding FilteredTexts}" x:Name="lstTexts" />
     </DockPanel>
 </Window>
