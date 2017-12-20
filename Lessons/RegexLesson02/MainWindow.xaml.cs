@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using Microsoft.Win32;
 
 namespace RegexLesson02
@@ -20,7 +21,14 @@ namespace RegexLesson02
         {
             OpenFileDialog aDlg = new OpenFileDialog();
             if (aDlg.ShowDialog() != true) return;
-            _Model.Load(aDlg.FileName);
+            try
+            {
+                _Model.Load(aDlg.FileName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void OnLoad_CanExecute(object sender, System.Windows.Input.CanExecuteRoutedEventArgs e)
@@ -30,7 +38,14 @@ namespace RegexLesson02
 
         private void OnStartFilter_Executed(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
         {
-            _Model.DoFilter();
+            try
+            {
+                _Model.DoFilter();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void OnStartFilter_CanExecute(object sender, System.Windows.Input.CanExecuteRoutedEventArgs e)
