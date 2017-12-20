@@ -24,8 +24,23 @@ namespace RegexLesson01
             else
                 Console.WriteLine("检测不通过！");
 
+            Console.WriteLine("显示首个匹配……");
+            ShowMatch(aRegex.Match(aText));
+
+            Console.WriteLine("显示全部匹配……");
+            MatchCollection aMatches = aRegex.Matches(aText);
+            foreach (Match aMatch in aMatches)
+            {
+                ShowMatch(aMatch);
+            }
+
+            Console.WriteLine("Press RETURN to exit...");
+            Console.ReadLine();
+        }
+
+        private static void ShowMatch(Match aMatch)
+        {
             // 整体提取
-            Match aMatch = aRegex.Match(aText);
             if (aMatch.Success)
                 Console.WriteLine($"匹配结果：{aMatch.Value}");
 
@@ -34,11 +49,6 @@ namespace RegexLesson01
             {
                 Console.WriteLine($"Group: {aGroup.Value}");
             }
-
-            // 
-
-            Console.WriteLine("Press RETURN to exit...");
-            Console.ReadLine();
         }
     }
 }
