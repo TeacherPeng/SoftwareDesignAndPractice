@@ -11,9 +11,12 @@ namespace RegexLesson01
     {
         static void Main(string[] args)
         {
-            Regex aRegex = new Regex(@"\bc[aeiou]+t\b");
-            string aText;
-            aText = Console.ReadLine();
+            Console.Write("请输入测试文本：");
+            string aText = Console.ReadLine();
+
+            Console.Write("请输入正则表达式：");
+            string aPattern = Console.ReadLine();
+            Regex aRegex = new Regex(aPattern);
 
             // 检测
             if (aRegex.IsMatch(aText))
@@ -33,6 +36,9 @@ namespace RegexLesson01
             }
 
             // 
+
+            Console.WriteLine("Press RETURN to exit...");
+            Console.ReadLine();
         }
     }
 }
