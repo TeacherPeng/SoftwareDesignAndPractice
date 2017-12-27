@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexLesson01", "RegexLesso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexLesson02", "RegexLesson02\RegexLesson02.csproj", "{16BC760C-7BC0-4A9C-95D0-62D8DEA72551}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexLesson03", "RegexLesson03\RegexLesson03.csproj", "{E7344939-7ACA-43A3-8971-7DDFCD9E1472}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{16BC760C-7BC0-4A9C-95D0-62D8DEA72551}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16BC760C-7BC0-4A9C-95D0-62D8DEA72551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16BC760C-7BC0-4A9C-95D0-62D8DEA72551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7344939-7ACA-43A3-8971-7DDFCD9E1472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7344939-7ACA-43A3-8971-7DDFCD9E1472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7344939-7ACA-43A3-8971-7DDFCD9E1472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7344939-7ACA-43A3-8971-7DDFCD9E1472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
