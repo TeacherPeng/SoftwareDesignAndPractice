@@ -33,7 +33,7 @@ namespace RegexLesson03
         private string _ReplaceResult;
 
         private static Encoding[] _Encodings = new Encoding[] { Encoding.Default, Encoding.ASCII, Encoding.UTF8, Encoding.Unicode, Encoding.UTF7, Encoding.UTF32, Encoding.BigEndianUnicode };
-        public Encoding[] Encodngs { get { return _Encodings; } }
+        public Encoding[] Encodings { get { return _Encodings; } }
 
         public Encoding CurrentEncoding { get { return _CurrentEncoding; } set { if (_CurrentEncoding == value) return; _CurrentEncoding = value; OnPropertyChanged(nameof(CurrentEncoding)); } }
         private Encoding _CurrentEncoding = Encoding.Default;

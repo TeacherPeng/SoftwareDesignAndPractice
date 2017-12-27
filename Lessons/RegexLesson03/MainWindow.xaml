@@ -28,7 +28,7 @@
             <MenuItem Header="匹配" Command="{StaticResource StartMatch}" />
             <MenuItem Header="替换" Command="{StaticResource StartReplace}" />
             <Slider Minimum="9" Maximum="72" Value="{Binding ElementName=this,Path=FontSize}" Width="100" />
-            <ComboBox />
+            <ComboBox ItemsSource="{Binding Encodings}" SelectedItem="{Binding CurrentEncoding}" DisplayMemberPath="EncodingName" />
         </Menu>
         <StackPanel DockPanel.Dock="Top">
             <DockPanel>
