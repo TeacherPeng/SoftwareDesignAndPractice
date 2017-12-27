@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -23,8 +24,8 @@ namespace RegexLesson03
         public string TargetText { get { return _TargetText; } set { if (_TargetText == value) return; _TargetText = value; OnPropertyChanged(nameof(TargetText)); } }
         private string _TargetText;
 
-        public MatchCollection Matches { get { return _Matches; } private set { if (_Matches == value) return; _Matches = value; OnPropertyChanged(nameof(Matches)); } }
-        private MatchCollection _Matches;
+        public List<MatchView> Matches { get { return _Matches; } private set { if (_Matches == value) return; _Matches = value; OnPropertyChanged(nameof(Matches)); } }
+        private List<MatchView> _Matches;
 
         public string CollectedText { get { return _CollectedText; } private set { if (_CollectedText == value) return; _CollectedText = value; OnPropertyChanged(nameof(CollectedText)); } }
         private string _CollectedText;
@@ -59,12 +60,35 @@ namespace RegexLesson03
             TargetText = File.ReadAllText(aFileName, CurrentEncoding);
         }
 
+        public class GroupView
+        {
+            public int Index { get; set; }
+            public string Value { get; set; }
+        }
+        public class MatchView
+        {
+            public int Index { get; set; }
+            public string Value { get; set; }
+            public List<GroupView> Groups { get; set; }
+        }
         public void GetMatches()
         {
             Regex aRegex = new Regex(Pattern);
-            Matches = aRegex.Matches(TargetText);
+            MatchCollection aMatches = aRegex.Matches(TargetText);
+            List<MatchView> aMatchViews = new List<MatchView>();
+            for (int i = 0; i < aMatches.Count; i++)
+            {
+                List<GroupView> aGroupViews = new List<GroupView>();
+                for (int j = 0; j < aMatches[i].Groups.Count; j++)
+                {
+                    aGroupViews.Add(new GroupView { Index = j, Value = aMatches[i].Groups[j].Value });
+                }
+                aMatchViews.Add(new MatchView { Index = i, Value = aMatches[i].Value, Groups = aGroupViews });
+            }
+            Matches = aMatchViews;
+
             StringBuilder aStringBuilder = new StringBuilder();
-            foreach (Match aMatch in Matches)
+            foreach (Match aMatch in aMatches)
             {
                 aStringBuilder.AppendLine(aMatch.Value);
             }

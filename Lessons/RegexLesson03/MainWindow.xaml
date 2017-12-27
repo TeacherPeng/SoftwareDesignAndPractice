@@ -28,7 +28,9 @@
             <MenuItem Header="匹配" Command="{StaticResource StartMatch}" />
             <MenuItem Header="替换" Command="{StaticResource StartReplace}" />
             <Slider Minimum="9" Maximum="72" Value="{Binding ElementName=this,Path=FontSize}" Width="100" />
-            <ComboBox ItemsSource="{Binding Encodings}" SelectedItem="{Binding CurrentEncoding}" DisplayMemberPath="EncodingName" />
+            <ComboBox ItemsSource="{Binding Encodings}" 
+                      SelectedItem="{Binding CurrentEncoding}" 
+                      DisplayMemberPath="EncodingName" />
         </Menu>
         <StackPanel DockPanel.Dock="Top">
             <DockPanel>
@@ -53,7 +55,12 @@
                                     <ListBox ItemsSource="{Binding Groups}" Margin="20,0,0,0">
                                         <ListBox.ItemTemplate>
                                             <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="Group[" />
+                                                <TextBlock Text="{Binding Index}" />
+                                                <TextBlock Text="]=" />
                                                 <TextBlock Text="{Binding Value}" />
+                                            </StackPanel>
                                             </DataTemplate>
                                         </ListBox.ItemTemplate>
                                     </ListBox>
