@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="qlDaPing" Class="MyLesson01DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PENGSW-ALIEN13\SQLEXPRESS;Initial Catalog=qlDaPing;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="LinqToSqlLesson01.Properties.Settings" SettingsPropertyName="qlDaPingConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="" Member="Contact">
+    <Type Name="Contact">
+      <Column Member="Id" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Member="Name" Type="System.String" DbType="nvarchar(20)" CanBeNull="false" />
+      <Column Member="Mobile" Type="System.String" CanBeNull="true" />
+      <Column Member="Memo" Type="System.String" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
