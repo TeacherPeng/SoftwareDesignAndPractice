@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexLesson02", "RegexLesso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexLesson03", "RegexLesson03\RegexLesson03.csproj", "{E7344939-7ACA-43A3-8971-7DDFCD9E1472}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestLesson01", "UnitTestLesson01\UnitTestLesson01.csproj", "{E1EC87F5-0FB2-448F-A478-0BB01B2643EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{FE9A2CA1-37F8-49AC-8792-16211E4C634D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{E7344939-7ACA-43A3-8971-7DDFCD9E1472}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7344939-7ACA-43A3-8971-7DDFCD9E1472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7344939-7ACA-43A3-8971-7DDFCD9E1472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1EC87F5-0FB2-448F-A478-0BB01B2643EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1EC87F5-0FB2-448F-A478-0BB01B2643EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1EC87F5-0FB2-448F-A478-0BB01B2643EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1EC87F5-0FB2-448F-A478-0BB01B2643EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9A2CA1-37F8-49AC-8792-16211E4C634D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9A2CA1-37F8-49AC-8792-16211E4C634D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9A2CA1-37F8-49AC-8792-16211E4C634D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9A2CA1-37F8-49AC-8792-16211E4C634D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
