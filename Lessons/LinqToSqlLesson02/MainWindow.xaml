@@ -1,0 +1,15 @@
+﻿<Window x:Class="LinqToSqlLesson02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LinqToSqlLesson02"
+        mc:Ignorable="d"
+        Title="Linq To Sql Lesson02" Height="350" Width="525">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Content="提交" Click="OnSubmit_Click" />
+        </ToolBar>
+        <DataGrid ItemsSource="{Binding Contacts}" />
+    </DockPanel>
+</Window>
