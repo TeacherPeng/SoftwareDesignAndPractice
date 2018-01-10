@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexLesson01", "RegexLesson01\RegexLesson01.csproj", "{1E5E1803-C87E-44FC-BF76-CAFB97AC4451}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSqlLesson01", "LinqToSqlLesson01\LinqToSqlLesson01.csproj", "{359B7E79-ECC5-4038-A51B-8070B85DFF61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSqlLesson02", "LinqToSqlLesson02\LinqToSqlLesson02.csproj", "{431DD2B3-929D-426C-9E5D-B92C59D1F04B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlLesson01", "XmlLesson01\XmlLesson01.csproj", "{40400072-EA2F-4569-A168-2A692A416C41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{431DD2B3-929D-426C-9E5D-B92C59D1F04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{431DD2B3-929D-426C-9E5D-B92C59D1F04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{431DD2B3-929D-426C-9E5D-B92C59D1F04B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40400072-EA2F-4569-A168-2A692A416C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40400072-EA2F-4569-A168-2A692A416C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40400072-EA2F-4569-A168-2A692A416C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40400072-EA2F-4569-A168-2A692A416C41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

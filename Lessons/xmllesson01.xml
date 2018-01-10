@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contacts>
+  <Contact Type="同学">
+    <Name>张三</Name>
+    <Mobile>13000000000</Mobile>
+    <Memo>不认识</Memo>
+  </Contact>
+  <Contact Type="同事">
+    <Name>李四</Name>
+    <Mobile>15000000000</Mobile>
+    <Memo>谁啊？</Memo>
+  </Contact>
+</Contacts>
