@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTestLesson01
 {
@@ -10,7 +6,7 @@ namespace UnitTestLesson01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("单元测试的目标系统 ，未完成……");
+            Console.WriteLine("单元测试的目标系统 ，假定尚未完成……");
         }
     }
 }
