@@ -15,7 +15,7 @@
         }
         public static Complex operator-(Complex c1, Complex c2)
         {
-            return new Complex(c1.x - c2.x, c1.x - c2.y);
+            return new Complex(c1.x - c2., c1.x - c2.y);
         }
     }
 }
