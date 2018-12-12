@@ -15,8 +15,8 @@ namespace UnitTests
             Complex c3 = c1 + c2;
 
             Console.WriteLine($"{c1.x}+{c1.y}i + {c2.x}+{c2.y}i = {c3.x}+{c3.y}i");
-            Assert.AreEqual(c3.x, 4);
-            Assert.AreEqual(c3.y, 6);
+            Assert.AreEqual(4, c3.x);
+            Assert.AreEqual(6, c3.y);
         }
 
         [TestMethod]
@@ -26,8 +26,8 @@ namespace UnitTests
             Complex c2 = new Complex(1, 2);
             Complex c3 = c1 - c2;
 
-            Assert.AreEqual(c3.x, 3);
-            Assert.AreEqual(c3.y, 5);
+            Assert.AreEqual(3, c3.x);
+            Assert.AreEqual(5, c3.y);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace UnitTestLesson01.Tests
             for (int i = 0; i < L.Length; i++) L[i] = i + 1;
             aTarget.MySort(L);
             for (int i = 0; i < L.Length; i++)
-                Assert.AreEqual(L[i], i + 1);
+                Assert.AreEqual(i + 1, L[i]);
         }
 
         // 逆序序列的排序测试
@@ -30,7 +30,7 @@ namespace UnitTestLesson01.Tests
             for (int i = 0; i < L.Length; i++) L[i] = TestLength - i;
             aTarget.MySort(L);
             for (int i = 0; i < L.Length; i++)
-                Assert.AreEqual(L[i], i + 1);
+                Assert.AreEqual(i + 1, L[i]);
         }
 
         // 随机序列的排序测试
@@ -58,7 +58,7 @@ namespace UnitTestLesson01.Tests
 
             aTarget.MySort(L);
             for (int i = 0; i < L.Length; i++)
-                Assert.AreEqual(L[i], i + 1);
+                Assert.AreEqual(i + 1, L[i]);
         }
     }
 }
