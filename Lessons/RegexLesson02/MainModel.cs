@@ -13,6 +13,19 @@ namespace RegexLesson02
             SourceTexts = aLines;
         }
 
+        public string[] SourceTexts
+        {
+            get { return _SourceTexts; }
+            set
+            {
+                if (_SourceTexts == value) return;
+                _SourceTexts = value;
+                DoFilter();
+                OnPropertyChanged(nameof(SourceTexts));
+            }
+        }
+        private string[] _SourceTexts;
+
         public void DoFilter()
         {
             if (string.IsNullOrEmpty(Pattern))
@@ -32,23 +45,28 @@ namespace RegexLesson02
             }
         }
 
-        public string[] SourceTexts
+        public List<string> FilteredTexts
         {
-            get { return _SourceTexts; }
-            set
+            get { return _FilteredTexts; }
+            private set
             {
-                if (_SourceTexts == value) return;
-                _SourceTexts = value;
-                DoFilter();
-                OnPropertyChanged(nameof(SourceTexts));
+                if (_FilteredTexts == value) return;
+                _FilteredTexts = value;
+                OnPropertyChanged(nameof(FilteredTexts));
             }
         }
-        private string[] _SourceTexts;
+        private List<string> _FilteredTexts;
 
-        public List<string> FilteredTexts { get { return _FilterdTexts; } private set { if (_FilterdTexts == value) return; _FilterdTexts = value; OnPropertyChanged(nameof(FilteredTexts)); } }
-        private List<string> _FilterdTexts;
-
-        public string Pattern { get { return _Pattern; } set { if (_Pattern == value) return; _Pattern = value; OnPropertyChanged(nameof(Pattern)); } }
+        public string Pattern
+        {
+            get { return _Pattern; }
+            set
+            {
+                if (_Pattern == value) return;
+                _Pattern = value;
+                OnPropertyChanged(nameof(Pattern));
+            }
+        }
         private string _Pattern;
 
         private void OnPropertyChanged(string aPropertyName)
