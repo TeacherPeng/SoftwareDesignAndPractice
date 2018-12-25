@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace RegexLesson01
 {
@@ -19,21 +15,22 @@ namespace RegexLesson01
             Regex aRegex = new Regex(aPattern);
 
             // 检测
-            if (aRegex.IsMatch(aText))
-                Console.WriteLine("检测通过！");
-            else
+            if (!aRegex.IsMatch(aText))
                 Console.WriteLine("检测不通过！");
-
-            Console.WriteLine("显示首个匹配……");
-            ShowMatch(aRegex.Match(aText));
-
-            Console.WriteLine("显示全部匹配……");
-            MatchCollection aMatches = aRegex.Matches(aText);
-            foreach (Match aMatch in aMatches)
+            else
             {
-                ShowMatch(aMatch);
-            }
+                Console.WriteLine("检测通过！");
 
+                Console.WriteLine("显示首个匹配……");
+                ShowMatch(aRegex.Match(aText));
+
+                Console.WriteLine("显示全部匹配……");
+                MatchCollection aMatches = aRegex.Matches(aText);
+                foreach (Match aMatch in aMatches)
+                {
+                    ShowMatch(aMatch);
+                }
+            }
             Console.WriteLine("Press RETURN to exit...");
             Console.ReadLine();
         }
@@ -47,7 +44,7 @@ namespace RegexLesson01
             // 局部提取
             foreach (Group aGroup in aMatch.Groups)
             {
-                Console.WriteLine($"Group: {aGroup.Value}");
+                Console.WriteLine($"    Group: {aGroup.Value}");
             }
         }
     }

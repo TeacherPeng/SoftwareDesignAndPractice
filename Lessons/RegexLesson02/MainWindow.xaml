@@ -20,6 +20,7 @@
             <Label Content="筛选条件：" />
             <TextBox Text="{Binding Pattern}" MinWidth="100" />
             <Button Content="开始筛选" Command="{StaticResource StartFilter}" />
+            <Separator />
             <Slider Minimum="9" Maximum="200" Value="{Binding ElementName=lstTexts,Path=FontSize}" Width="200" />
         </ToolBar>
         <ListBox ItemsSource="{Binding FilteredTexts}" x:Name="lstTexts" />
