@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexToolkit", "RegexToolkit\RegexToolkit.csproj", "{C2FB1801-3C34-4D61-A4E4-6873CE66241E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextDialogHelper", "TextDialogHelper\TextDialogHelper.csproj", "{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2FB1801-3C34-4D61-A4E4-6873CE66241E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2FB1801-3C34-4D61-A4E4-6873CE66241E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2FB1801-3C34-4D61-A4E4-6873CE66241E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2FB1801-3C34-4D61-A4E4-6873CE66241E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {259FDB71-D669-4D2E-8B1C-5E3D1756F62F}
+	EndGlobalSection
+EndGlobal
