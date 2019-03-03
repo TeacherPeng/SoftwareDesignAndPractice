@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="RegexDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="RegularExpression">
+    <Type Name="RegularExpression">
+      <Column Name="Id" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Expression" Type="System.String" DbType="nvarchar(1024)" CanBeNull="false" />
+      <Column Name="Memo" Type="System.String" DbType="nvarchar(255)" CanBeNull="true" />
+      <Column Member="UserId" Type="System.String" DbType="nvarchar(255)" CanBeNull="false" />
+      <Association Name="User_RegularExpression" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="User">
+    <Type Name="User">
+      <Column Member="UserId" Type="System.String" DbType="nvarchar(255)" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Member="Password" Type="System.String" DbType="nvarchar(255)" CanBeNull="false" />
+      <Association Name="User_RegularExpression" Member="RegularExpression" ThisKey="UserId" OtherKey="UserId" Type="RegularExpression" />
+    </Type>
+  </Table>
+</Database>

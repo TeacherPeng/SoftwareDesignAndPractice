@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexToolkit", "RegexToolkit\RegexToolkit.csproj", "{C2FB1801-3C34-4D61-A4E4-6873CE66241E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextDialogHelper", "TextDialogHelper\TextDialogHelper.csproj", "{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSql001", "LinqToSql001\LinqToSql001.csproj", "{2A0D6F06-6D64-4B6E-B5B1-552342D55123}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0D6F06-6D64-4B6E-B5B1-552342D55123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0D6F06-6D64-4B6E-B5B1-552342D55123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0D6F06-6D64-4B6E-B5B1-552342D55123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0D6F06-6D64-4B6E-B5B1-552342D55123}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

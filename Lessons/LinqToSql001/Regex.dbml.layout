@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Regex">
+  <DataContextMoniker Name="/RegexDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6e4e09df-c631-48a5-ac69-02f271f39506" absoluteBounds="1.125, 0.875, 2, 1.537305094401042">
+      <DataClassMoniker Name="/RegexDataContext/RegularExpression" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0536275e-a58e-4915-9d18-342a05d8aa4b" absoluteBounds="1.1400000000000001, 1.335, 1.9700000000000002, 0.97730509440104163" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5010834-ab49-4761-81a0-74eb272d647e" absoluteBounds="5.625, 0.75, 2, 1.1677168782552081">
+      <DataClassMoniker Name="/RegexDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4eb19a64-b3ff-4111-922a-b842fcbc5956" absoluteBounds="5.64, 1.21, 1.9700000000000002, 0.60771687825520826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 1.3963584391276); (3.125 : 1.3963584391276)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RegexDataContext/User/User_RegularExpression" />
+      <nodes>
+        <classShapeMoniker Id="f5010834-ab49-4761-81a0-74eb272d647e" />
+        <classShapeMoniker Id="6e4e09df-c631-48a5-ac69-02f271f39506" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
