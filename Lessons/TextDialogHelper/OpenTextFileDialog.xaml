@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TextDialogHelper"
         mc:Ignorable="d"
-        Title="打开文本文件" Height="450" Width="800">
+        Title="打开文本文件" Height="450" Width="800" Icon="logo.ico">
     <Window.Resources>
         <RoutedCommand x:Key="Ok" />
     </Window.Resources>

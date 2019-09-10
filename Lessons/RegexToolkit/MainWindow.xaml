@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegexToolkit"
         mc:Ignorable="d" x:Name="this"
-        Title="正则表达式调试工具" Height="450" Width="800">
+        Title="正则表达式调试工具" Height="450" Width="800" Icon="logo.ico">
     <Window.Resources>
         <RoutedCommand x:Key="Match" />
         <RoutedCommand x:Key="Select" />
