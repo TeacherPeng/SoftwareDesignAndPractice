@@ -31,13 +31,12 @@
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
             <Slider Minimum="9" Maximum="72" Width="100" Value="{Binding FontSize,ElementName=this}" />
             <Label Content="正则表达式：" />
-            <ComboBox 
-                MinWidth="100" 
+            <ComboBox Width="200"
                 Text="{Binding Pattern}" 
                 ItemsSource="{Binding Patterns}" 
                 IsEditable="True" />
             <Label Content="替换表达式：" />
-            <TextBox MinWidth="100" Text="{Binding ReplacePattern}" />
+            <TextBox Width="100" Text="{Binding ReplacePattern}" />
             <Button Content="匹配" Command="{StaticResource Match}" />
             <Button Content="提取" Command="{StaticResource Select}" />
             <Button Content="替换" Command="{StaticResource Replace}" />
