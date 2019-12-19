@@ -1,0 +1,39 @@
+﻿<Window x:Class="UIHelper.OpenTextFileDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIHelper"
+        mc:Ignorable="d"
+        Title="打开文本文件" Height="450" Width="800">
+    <Window.Resources>
+        <RoutedCommand x:Key="Browse" />
+        <RoutedCommand x:Key="Ok" />
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding 
+            Command="{StaticResource Browse}" 
+            Executed="OnBrowse_Executed" />
+        <CommandBinding
+            Command="{StaticResource Ok}"
+            Executed="OnOk_Executed"
+            CanExecute="OnOk_CanExecute" />
+    </Window.CommandBindings>
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Label Content="文件名：" />
+            <TextBox Text="{Binding FileName}" Width="200" />
+            <Button Content=" .. " Command="{StaticResource Browse}" />
+            <Separator Margin="10" />
+            <Label Content="编码：" />
+            <ComboBox ItemsSource="{Binding Encodings}" 
+                     DisplayMemberPath="EncodingName" 
+                     SelectedItem ="{Binding CurrentEncoding}" />
+        </StackPanel>
+        <UniformGrid Rows="1" DockPanel.Dock="Bottom">
+            <Button Content="确定" Command="{StaticResource Ok}" IsDefault="True" />
+            <Button Content="取消" IsCancel="True" />
+        </UniformGrid>
+        <TextBox Text="{Binding Preview}" IsReadOnly="True" />
+    </DockPanel>
+</Window>
