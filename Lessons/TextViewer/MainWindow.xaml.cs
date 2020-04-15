@@ -13,7 +13,7 @@ namespace TextViewer
             this.DataContext = _Model;
         }
 
-        private Model _Model;
+        private readonly Model _Model;
 
         private void OnExit_Click(object sender, RoutedEventArgs e)
         {

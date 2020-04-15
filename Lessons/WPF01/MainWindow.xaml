@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF01"
+        mc:Ignorable="d"
+        Title="Demo" Height="450" Width="600">
+    <Window.Resources>
+        <RoutedCommand x:Key="Ok" />
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Ok}" Executed="OnOk_Executed" CanExecute="OnOk_CanExecute" />
+    </Window.CommandBindings>
+    <DockPanel Margin="10">
+        <Label Content="请在下方输入有效Email地址：" DockPanel.Dock="Top" />
+        <TextBox Text="{Binding Email,UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Top" />
+        <DockPanel DockPanel.Dock="Top">
+            <Button Content=" .. " DockPanel.Dock="Right" Click="OnBrowseEmailContent_Click" />
+            <Label Content="请在下方输入Email正文：" />
+        </DockPanel>
+        <Button Content="确定" Command="{StaticResource Ok}" DockPanel.Dock="Bottom" />
+        <GroupBox Header="图片预览" DockPanel.Dock="Bottom" >
+            <Image Source="{Binding PictureFileName}" Height="100" />
+        </GroupBox>
+        <TextBox Text="{Binding PictureFileName,UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Bottom" />
+        <DockPanel DockPanel.Dock="Bottom" >
+            <Button Content=" .. " DockPanel.Dock="Right" Click="OnBrowsePicture_Click" />
+            <Label Content="请在下方输入或选择附件图片：" DockPanel.Dock="Bottom" />
+        </DockPanel>
+        <TextBox Text="{Binding EmailContent,UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" />
+    </DockPanel>
+</Window>
