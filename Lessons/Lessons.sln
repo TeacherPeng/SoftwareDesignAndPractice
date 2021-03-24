@@ -45,6 +45,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIHelper", "UIHelper\UIHelp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF01", "WPF01\WPF01.csproj", "{F842773E-D741-4145-9232-10A88F1C0BF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextDialogHelper", "TextDialogHelper\TextDialogHelper.csproj", "{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTextFileHelper", "OpenTextFileHelper\OpenTextFileHelper.csproj", "{5D8CB56C-DF67-4639-B676-E7A682DFE9D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PengSW_JsonHelper", "..\..\..\EM Projects\Common\PengSW_JsonHelper\PengSW_JsonHelper.csproj", "{155FFD1E-E582-46C1-B556-CD50B11C0AC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +141,18 @@ Global
 		{F842773E-D741-4145-9232-10A88F1C0BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F842773E-D741-4145-9232-10A88F1C0BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F842773E-D741-4145-9232-10A88F1C0BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A823D54-E45A-482E-9EB2-6000B1C1F5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D8CB56C-DF67-4639-B676-E7A682DFE9D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8CB56C-DF67-4639-B676-E7A682DFE9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D8CB56C-DF67-4639-B676-E7A682DFE9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D8CB56C-DF67-4639-B676-E7A682DFE9D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155FFD1E-E582-46C1-B556-CD50B11C0AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155FFD1E-E582-46C1-B556-CD50B11C0AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155FFD1E-E582-46C1-B556-CD50B11C0AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155FFD1E-E582-46C1-B556-CD50B11C0AC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

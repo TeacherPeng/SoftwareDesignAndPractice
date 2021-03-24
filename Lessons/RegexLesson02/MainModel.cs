@@ -1,15 +1,44 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 namespace RegexLesson02
 {
     class MainModel : INotifyPropertyChanged
     {
-        public void Load(string aFileName)
+        public Encoding[] Encodings
         {
-            string[] aLines = File.ReadAllLines(aFileName);
+            get { return _Encodings; }
+        }
+        private Encoding[] _Encodings = new Encoding[] 
+        {
+            Encoding.Default,
+            Encoding.ASCII,
+            Encoding.BigEndianUnicode,
+            Encoding.Unicode,
+            Encoding.UTF32,
+            Encoding.UTF7,
+            Encoding.UTF8,
+        };
+
+        public Encoding CurrentEncoding
+        {
+            get => _CurrentEncoding;
+            set
+            {
+                if (_CurrentEncoding == value) return; 
+                _CurrentEncoding = value; 
+                OnPropertyChanged(nameof(CurrentEncoding));
+            }
+        }
+        private Encoding _CurrentEncoding = Encoding.Default;
+
+        public void Load(string aFileName, Encoding aEncoding)
+        {
+            string[] aLines = File.ReadAllLines(aFileName, aEncoding);
             SourceTexts = aLines;
         }
 
@@ -68,6 +97,34 @@ namespace RegexLesson02
             }
         }
         private string _Pattern;
+
+        // 配置文件操作
+        private const string ConfigFileName = "Regex.config";
+        public void LoadConfig()
+        {
+            try{
+                XDocument aXDocument = XDocument.Load(ConfigFileName);
+                this.ReadFromXml(aXDocument.Root.Element("Regex"));
+            }catch (System.Exception){}
+        }
+        public void SaveConfig()
+        {
+            try{
+                XDocument aXDocument = new XDocument(new XElement("Config", this.CreateXElement("Regex")));
+                aXDocument.Save(ConfigFileName);
+            }catch (System.Exception){}
+        }
+        #region 序列化
+        public void ReadFromXml(XElement aXElement)
+        {
+            if (aXElement == null) return;
+            Pattern = aXElement.Element(nameof(Pattern))?.Value;
+        }
+        public XElement CreateXElement(string aXmlNodeName)
+        {
+            return new XElement(aXmlNodeName, new XElement(nameof(Pattern), Pattern));
+        }
+        #endregion
 
         private void OnPropertyChanged(string aPropertyName)
         {

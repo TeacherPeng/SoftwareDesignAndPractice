@@ -24,10 +24,8 @@ namespace TextDialogHelper
             get { return _FileName; }
             set
             {
-                if (_FileName == value) return;
-                _FileName = value;
-                OnPropertyChanged(nameof(FileName));
-                UpdatePreview();
+                if (_FileName == value) return; _FileName = value; OnPropertyChanged(nameof(FileName));
+                UpdatePreview(true);
             }
         }
         private string _FileName;
@@ -35,13 +33,7 @@ namespace TextDialogHelper
         public Encoding[] Encodings { get { return _Encodings; } }
         private readonly static Encoding[] _Encodings = new Encoding[]
         {
-            Encoding.ASCII,
-            Encoding.Default,
-            Encoding.Unicode,
-            Encoding.UTF7,
-            Encoding.UTF8,
-            Encoding.UTF32,
-            Encoding.BigEndianUnicode,
+            Encoding.ASCII, Encoding.Default, Encoding.Unicode, Encoding.UTF7, Encoding.UTF8, Encoding.UTF32, Encoding.BigEndianUnicode,
         };
 
         public Encoding CurrentEncoding
@@ -49,15 +41,12 @@ namespace TextDialogHelper
             get { return _CurrentEncoding; }
             set
             {
-                if (_CurrentEncoding == value) return;
-                _CurrentEncoding = value;
-                OnPropertyChanged(nameof(CurrentEncoding));
-                UpdatePreview();
+                if (_CurrentEncoding == value) return; _CurrentEncoding = value; OnPropertyChanged(nameof(CurrentEncoding));
+                UpdatePreview(false);
             }
         }
         private Encoding _CurrentEncoding = Encoding.UTF8;
 
-        private byte[] _Bytes = new byte[1024];
 
         public string Preview
         {
@@ -83,15 +72,17 @@ namespace TextDialogHelper
             FileName = aDlg.FileName;
         }
 
-        private void UpdatePreview()
+        private byte[] _Bytes = new byte[1024];
+        private void UpdatePreview(bool aReload)
         {
             try
             {
-                using (FileStream aStream = File.OpenRead(FileName))
-                {
-                    aStream.Read(_Bytes, 0, _Bytes.Length);
-                    aStream.Close();
-                }
+                if (aReload)
+                    using (FileStream aStream = File.OpenRead(FileName))
+                    {
+                        aStream.Read(_Bytes, 0, _Bytes.Length);
+                        aStream.Close();
+                    }
                 Preview = CurrentEncoding.GetString(_Bytes);
                 txtPreview.Foreground = new SolidColorBrush(Colors.Black);
             }
