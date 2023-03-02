@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28315.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexLesson01", "RegexLesson01\RegexLesson01.csproj", "{1E5E1803-C87E-44FC-BF76-CAFB97AC4451}"
 EndProject
@@ -50,6 +50,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTextFileHelper", "OpenTextFileHelper\OpenTextFileHelper.csproj", "{5D8CB56C-DF67-4639-B676-E7A682DFE9D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PengSW_JsonHelper", "..\..\..\EM Projects\Common\PengSW_JsonHelper\PengSW_JsonHelper.csproj", "{155FFD1E-E582-46C1-B556-CD50B11C0AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUiHelper", "MyUiHelper\MyUiHelper.csproj", "{15A1A4D0-8548-4CFE-B56C-1EC885D8D145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adodb01", "Adodb01\Adodb01.csproj", "{0A7FEB01-CB76-4152-AB99-69C716249390}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +157,14 @@ Global
 		{155FFD1E-E582-46C1-B556-CD50B11C0AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{155FFD1E-E582-46C1-B556-CD50B11C0AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{155FFD1E-E582-46C1-B556-CD50B11C0AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A1A4D0-8548-4CFE-B56C-1EC885D8D145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A1A4D0-8548-4CFE-B56C-1EC885D8D145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A1A4D0-8548-4CFE-B56C-1EC885D8D145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A1A4D0-8548-4CFE-B56C-1EC885D8D145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A7FEB01-CB76-4152-AB99-69C716249390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A7FEB01-CB76-4152-AB99-69C716249390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A7FEB01-CB76-4152-AB99-69C716249390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A7FEB01-CB76-4152-AB99-69C716249390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

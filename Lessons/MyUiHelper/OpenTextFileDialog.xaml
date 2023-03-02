@@ -1,0 +1,27 @@
+﻿<Window x:Class="MyUiHelper.OpenTextFileDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyUiHelper"
+        mc:Ignorable="d"
+        Title="Open Text File With Encoding" Height="200" Width="400">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Label Content="File Name: " />
+            <TextBox Text="{Binding FileName}" Width="200" />
+            <Button Content="..." Click="OnOpen_Click" />
+            <Separator Margin="10" />
+            <Label Content="Encoding: " />
+            <ComboBox Width="100" 
+                      ItemsSource="{Binding Encodings}" 
+                      SelectedItem="{Binding CurrentEncoding}"
+                      DisplayMemberPath="EncodingName" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+            <Button Content="Ok" IsDefault="True" Width="50" />
+            <Button Content="Cancel" IsCancel="True" Width="50" />
+        </StackPanel>
+        <TextBlock Text="{Binding PreviewText}" Margin="10" Background="AliceBlue" x:Name="txtPreview" />
+    </DockPanel>
+</Window>

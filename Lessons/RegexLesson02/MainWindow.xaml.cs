@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Text;
 using System.Windows;
-using Microsoft.Win32;
 using TextDialogHelper;
 
 namespace RegexLesson02
